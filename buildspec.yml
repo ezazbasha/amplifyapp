@@ -3,9 +3,6 @@ version: 0.2
 env:
   variables:
     JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
-  parameter-store:
-    LOGIN_PASSWORD: /CodeBuild/dockerLoginPassword
-
 phases:
   install:
     commands:
@@ -17,8 +14,7 @@ phases:
   pre_build:
     commands:
       - echo Entered the pre_build phase...
-      - docker login –u User –p $LOGIN_PASSWORD
-    finally:
+       finally:
       - echo This always runs even if the login command fails 
   build:
     commands:
