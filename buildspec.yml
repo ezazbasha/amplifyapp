@@ -14,9 +14,7 @@ phases:
   pre_build:
     commands:
       - echo Entered the pre_build phase...
-       finally:
-      - echo This always runs even if the login command fails 
-  build:
+    build:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
@@ -29,29 +27,6 @@ phases:
       - echo Build completed on `date`
 
 reports:
-  arn:aws:codebuild:your-region:your-aws-account-id:report-group/report-group-name-1:
-    files:
-      - "**/*"
-    base-directory: 'target/tests/reports'
-    discard-paths: no
-  reportGroupCucumberJson:
-    files:
-      - 'cucumber/target/cucumber-tests.xml'
-    discard-paths: yes
-    file-format: CucumberJson # default is JunitXml
-artifacts:
-  files:
-    - target/messageUtil-1.0.jar
-  discard-paths: yes
-  secondary-artifacts:
-    artifact1:
-      files:
-        - target/artifact-1.0.jar
-      discard-paths: yes
-    artifact2:
-      files:
-        - target/artifact-2.0.jar
-      discard-paths: yes
-cache:
+      - echo Entered the report phase..
   paths:
     - '/root/.m2/**/*'
