@@ -27,7 +27,7 @@ phases:
       - echo Build completed on `date`
 
 reports:
-  arn:aws:codebuild:Asia Pacific (Mumbai):862112193817:report-group/report-group-ezaz-1:
+  arn:aws:codebuild:Asia Pacific (Mumbai):862112193817:report-groupreport-group-ezaz-1
     files:
       - "**/*"
     base-directory: 'target/tests/reports'
