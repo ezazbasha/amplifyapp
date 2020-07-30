@@ -14,7 +14,7 @@ artifacts:
         - target/artifact-2.0.jar
 cache: 
   paths: 
-    - /root/.m2/**/*
+    - cp ./settings.xml /root/.m2/settings.xml
 env: 
   variables: 
     JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
