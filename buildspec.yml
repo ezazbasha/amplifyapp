@@ -41,5 +41,5 @@ phases:
     reports:
     arn:aws:codebuild:Asia Pacific (Mumbai):862112193817:report-groupreport-group-ezaz-1 files:- "**/*" base-directory:'target/tests/reports' discard-paths:no:
     files:- 'cucumber/target/cucumber-tests.xml':
-    file-format:CucumberJson
+    file-format:CucumberJson:
 version: 0.2
